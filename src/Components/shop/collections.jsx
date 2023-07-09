@@ -4,7 +4,7 @@ import ProductCards from "./ProductCard";
 const Collecton = () => {
   const [data, setData] = useState([]);
 
-  const [show, setShow] = useState("4");
+  const [show, setShow] = useState(4);
   const [sort, setSort] = useState("desc");
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const Collecton = () => {
 
   return (
     <section>
+      {console.log(show)}
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <header>
           <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
@@ -29,7 +30,7 @@ const Collecton = () => {
           <div className="flex rounded border border-gray-100">
             <button
               className="inline-flex h-10 w-10 items-center justify-center border-e text-gray-600 transition hover:bg-gray-50 hover:text-gray-700"
-              onClick={() => setShow("4")}
+              onClick={() => setShow(4)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +50,7 @@ const Collecton = () => {
 
             <button
               className="inline-flex h-10 w-10 items-center justify-center text-gray-600 transition hover:bg-gray-50 hover:text-gray-700"
-              onClick={() => setShow("2")}
+              onClick={() => setShow(2)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +87,7 @@ const Collecton = () => {
         </div>
 
         <ul
-          className={`mt-4 grid gap-4 sm:grid-cols-${show} lg:grid-cols-${show}`}
+          className={`mt-4 grid gap-4 lg:grid-cols-${show}`}
         >
           {data?.map((item) => {
             return <ProductCards records={item} show={show}></ProductCards>;

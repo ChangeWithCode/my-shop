@@ -35,15 +35,15 @@ const ProductCards = ({ records }) => {
         </h3>
 
         <p className="mt-1.5 text-sm text-gray-700">${records.price}</p>
-        <div class="mb-4 flex items-center justify-between border-b py-4">
-          <div class="flex flex-col gap-0.5">
-            <div class="-ml-1 flex gap-0.5">
+        <div className="mb-4 flex items-center justify-between border-b py-4">
+          <div className="flex flex-col gap-0.5">
+            <div className="-ml-1 flex gap-0.5">
               {[...Array(Math.round(records.rating.rate))].map(() => {
                 return <Review></Review>;
               })}
             </div>
 
-            <span class="block text-sm text-gray-500">
+            <span className="block text-sm text-gray-500">
               Bases on {records.rating.count} reviews
             </span>
           </div>
