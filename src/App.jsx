@@ -4,7 +4,6 @@ import Header from "./Components/Header/Header";
 import Banners from "./Components/Banner/Banner";
 import Collecton from "./Components/shop/collections";
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>

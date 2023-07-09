@@ -93,7 +93,7 @@ const Header = () => {
             </a>
           </div>
 
-          <CartSidebar></CartSidebar>
+          {/* <CartSidebar></CartSidebar> */}
 
           
         </div>

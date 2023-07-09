@@ -38,8 +38,8 @@ const ProductCards = ({ records }) => {
         <div className="mb-4 flex items-center justify-between border-b py-4">
           <div className="flex flex-col gap-0.5">
             <div className="-ml-1 flex gap-0.5">
-              {[...Array(Math.round(records.rating.rate))].map(() => {
-                return <Review></Review>;
+              {[...Array(Math.round(records.rating.rate))].map((index) => {
+                return <Review key={index}></Review>;
               })}
             </div>
 
